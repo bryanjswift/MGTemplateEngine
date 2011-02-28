@@ -419,15 +419,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm7,
+					arm6,
+					i386,
+				);
+				BUILD_VARIANTS = (
+					debug,
+					release,
+				);
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(MTTE_LIBRARY_DIR)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = libMGTemplateEngine_Prefix.pch;
+				INSTALL_PATH = "/$(MTTE_LIBRARY_NAME)-$(MTTE_LIBRARY_VERSION)";
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
-				PRODUCT_NAME = MGTemplateEngine;
+				PRODUCT_NAME = "$(MTTE_LIBRARY_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH)/Headers";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -436,14 +448,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm7,
+					arm6,
+					i386,
+				);
+				BUILD_VARIANTS = (
+					debug,
+					release,
+				);
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(MTTE_LIBRARY_DIR)";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = libMGTemplateEngine_Prefix.pch;
+				INSTALL_PATH = "/$(MTTE_LIBRARY_NAME)-$(MTTE_LIBRARY_VERSION)";
 				PREBINDING = NO;
-				PRODUCT_NAME = MGTemplateEngine;
+				PRODUCT_NAME = "$(MTTE_LIBRARY_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH)/Headers";
 				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
@@ -483,26 +507,47 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					i386,
+					arm7,
+					arm6,
+				);
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				MTTE_LIBRARY_DIR = "$(USER_LIBRARY_DIR)/MGTemplateEngine";
+				MTTE_LIBRARY_NAME = MGTemplateEngine;
+				MTTE_LIBRARY_VERSION = 1.0.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "i386 armv6 armv7";
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					i386,
+					arm7,
+					arm6,
+				);
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTTE_LIBRARY_DIR = "$(USER_LIBRARY_DIR)/MGTemplateEngine";
+				MTTE_LIBRARY_NAME = MGTemplateEngine;
+				MTTE_LIBRARY_VERSION = 1.0.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "i386 armv6 armv7";
 			};
 			name = Release;
 		};
